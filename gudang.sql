@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Jun 2020 pada 22.17
+-- Waktu pembuatan: 07 Jun 2020 pada 04.12
 -- Versi server: 10.1.34-MariaDB
 -- Versi PHP: 7.2.8
 
@@ -40,8 +40,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `name`, `jumlah`, `image`) VALUES
-('5cb90329d0f13', 'Anggrek', 13, 'default.jpg'),
-('5cb90737356f4', 'Melati', 412221, '5cb90737356f4.png');
+('5cb90737356f4', 'Pupuk Organik', 41, 'organik.jpg'),
+('5edc48f43bd15', 'Pupuk Urea', 32, 'urea.jpg'),
+('5edc4a8e2a4be', 'Pupuk ZA', 40, 'za.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `full_name`, `phone`, `role`, `last_login`, `photo`, `created_at`, `is_active`) VALUES
-(1, 'dian', '$2y$10$TpipIS3PDfeHTJWggvnFO.eT/dVBMyVKI5OcYV1avGMnt8wTqOt5O', 'dian@petanikode.com', 'Ahmad Muhardian', '08123456789', 'admin', '2020-06-06 15:30:07', 'user_no_image.jpg', '2019-12-10 08:46:40', 1);
+(1, 'dian', '$2y$10$TpipIS3PDfeHTJWggvnFO.eT/dVBMyVKI5OcYV1avGMnt8wTqOt5O', 'admin@gmail.com', 'Ahmad', '08123456789', 'admin', '2020-06-07 01:19:42', 'user_no_image.jpg', '2019-12-10 08:46:40', 1),
+(2, 'anas', '$2y$10$Dy4ySqOiDqKisEyoKJEsl.L2psUIjeKMwmp5W3iElRQLKZF0.kKbS', 'anastri@gmail.com', 'anas trikrisna', '052334422374', 'admin', '2020-06-07 02:10:43', 'user_no_image.jpg', '2020-06-07 02:10:14', 1);
 
 --
 -- Indexes for dumped tables
@@ -94,7 +96,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
